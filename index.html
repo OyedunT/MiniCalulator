@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: #007bff;
+    }
+    #main{
+        width: 250px;
+        height: 300px;
+        margin-left: 400px;
+        border-radius:30px;
+        background-color: dodgerblue;
+         box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.3);
+         margin-top: 100px;
+         cursor: pointer;
+    }
+    #input1{
+        width: 150px;
+        height: 30px;
+        margin-left: 40px;
+        margin-top: 20px;
+        border-radius: 5px;
+        padding: 2px;
+        padding-left: 10px;
+        border: none;
+        outline: none;
+        font-size: 15px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    #input2{
+        width: 150px;
+        height: 30px;
+        margin-left: 40px;
+        margin-top: 2px;
+        border-radius: 5px;
+        padding: 2px;
+        padding-left: 15px;
+        border: none;
+        outline: none;
+        font-size: 15px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    #result{
+        width: 150px;
+        height: 30px;
+        margin-left: 40px;
+        margin-top: 2px;
+        border-radius: 5px;
+        padding: 2px;
+        padding-left: 15px;
+        border: none;
+        outline: none;
+        font-size: 15px;
+        font-weight: bold;
+        background-color: rgb(241, 234, 234);
+        cursor: pointer;
+    }
+    #add{
+        width: 150px;
+        height: 20px;
+        font-size: large;
+        margin-left:45px;
+        margin-top: 2px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    #mul{
+        width: 150px;
+        height: 20px;
+        font-size: large;
+        margin-left:45px;
+        margin-top: 1px;
+        border: none;
+         border-radius: 5px;
+         cursor: pointer;
+    }
+    #sub{
+        width: 150px;
+        height: 20px;
+        font-size: large;
+        margin-left:45px;
+        border: none;
+        margin-top: 1px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    #div{
+        width: 150px;
+        height: 20px;
+        font-size: large;
+        margin-left:45px;
+        border: none;
+        margin-top: 1px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+</style>
+<body>
+   
+    <main>
+        <div id="main">
+        <input id="input1" type="number" placeholder="Input Your Number">
+        <br>
+        <br>
+        <input id="input2" type="number" placeholder="Input Your Number">
+        <br>
+        <br>
+        <h1 id="result"></h1>
+        <br>
+        <button id="add" onclick="Addition()">+</button>
+        <button id="mul" onclick="Multiplication()">*</button>
+        <button id="sub" onclick="Subtraction()">-</button>
+        <button id="div" onclick="Division()">/</button>
+        </div>
+    </main>
+</body>
+</html>
+<script>
+ let input1 = document.getElementById("input1");
+    let input2 =  document.getElementById("input2");
+    let result = document.getElementById("result")
+
+    // Function For Addition
+    function Addition(){
+    console.log(document.getElementById("input1").value);
+    console.log(document.getElementById("input2").value);
+    console.log(Number(input1.value) + Number (input2.value));
+    result.innerHTML=(Number(input1.value) + Number (input2.value));
+}
+
+// Function For Multiplication
+function Multiplication(){
+    console.log(document.getElementById("input1").value);
+    console.log(document.getElementById("input2").value);
+    console.log(Number(input1.value) * Number (input2.value));
+    result.innerHTML=(Number(input1.value) * Number (input2.value));
+}
+// Function For Subtraction
+function Subtraction(){
+    console.log(document.getElementById("input1").value);
+    console.log(document.getElementById("input2").value);
+    console.log(Number(input1.value) - Number (input2.value));
+    result.innerHTML=(Number(input1.value) - Number (input2.value));
+}
+
+// Function For Division
+function Division(){
+    console.log(document.getElementById("input1").value);
+    console.log(document.getElementById("input2").value);
+    console.log(Number(input1.value) / Number (input2.value));
+    result.innerHTML=(Number(input1.value) / Number (input2.value));
+}
+</script>
